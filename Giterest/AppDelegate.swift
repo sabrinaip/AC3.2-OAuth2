@@ -13,9 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    GithubOAuthManager.configure(cliendID: "116f8933d05293d59a9e", clientSecret: "a7d096fabfbac38f015829dbf6fe5b82c9e74753")
+    
+    do {
+        try GithubOAuthManager.shared.requestAuthorization(scopes: [.user, .public_repo])
+    }
+    catch {
+        print("Error: \(error)")
+    }
+    
     return true
   }
 
