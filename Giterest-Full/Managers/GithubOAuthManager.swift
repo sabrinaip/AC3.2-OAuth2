@@ -43,10 +43,10 @@ internal class GithubOAuthManager {
     var urlComponents = URLComponents(url: GithubOAuthManager.authorizationURL, resolvingAgainstBaseURL: true)
     
     let clientIDQuery = URLQueryItem(name: "client_id", value: self.clientID!)
+    let scopeQuery = URLQueryItem(name: "scope", value: scopes.flatMap { $0.rawValue }.joined(separator: " ") )
     let redirectURIQuery = URLQueryItem(name: "redirect_uri", value: GithubOAuthManager.redirectURI.absoluteString)
-    let scopeQuery = URLQueryItem(name: "scope", value: scopes.flatMap { $0.rawValue }.joined(separator: " ".addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!) )
     
-    urlComponents?.queryItems = [clientIDQuery, redirectURIQuery, scopeQuery]
+    urlComponents?.queryItems = [clientIDQuery, scopeQuery, redirectURIQuery]
     
     UIApplication.shared.open(urlComponents!.url!, options: [:], completionHandler: nil)
   }
@@ -79,13 +79,13 @@ internal class GithubOAuthManager {
       }
       
       if response != nil {
-        print("Response: \(response)")
+//        print("Response: \(response)")
         
         // how do we know it's utf8 for that data->string conversion? 
          print(response!.textEncodingName!)
         
         // what about all that header info?
-         print(response.unsafelyUnwrapped)
+//         print(response.unsafelyUnwrapped)
         
         // how about that whole status code thing?
         if let httpResponse = response as? HTTPURLResponse {
