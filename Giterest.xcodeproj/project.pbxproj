@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14DEA7BB1DDD776F007AEA56 /* GithubRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */; };
+		14DEA7BF1DDE5CC1007AEA56 /* GithubOAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DEA7BE1DDE5CC1007AEA56 /* GithubOAuthManager.swift */; };
 		14EB9FBE1DDD3CEA00CC0D29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB9FBD1DDD3CEA00CC0D29 /* AppDelegate.swift */; };
 		14EB9FC01DDD3CEA00CC0D29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB9FBF1DDD3CEA00CC0D29 /* ViewController.swift */; };
 		14EB9FC31DDD3CEA00CC0D29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EB9FC11DDD3CEA00CC0D29 /* Main.storyboard */; };
@@ -42,7 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubRequestManager.swift; sourceTree = "<group>"; };
+		14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubRequestManager.swift; path = "Giterest-FullTests/GithubRequestManager.swift"; sourceTree = SOURCE_ROOT; };
+		14DEA7BE1DDE5CC1007AEA56 /* GithubOAuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GithubOAuthManager.swift; path = Managers/GithubOAuthManager.swift; sourceTree = "<group>"; };
 		14EB9FBA1DDD3CEA00CC0D29 /* Giterest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giterest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EB9FBD1DDD3CEA00CC0D29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14EB9FBF1DDD3CEA00CC0D29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14DEA7C01DDE5CCD007AEA56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				14EB9FBF1DDD3CEA00CC0D29 /* ViewController.swift */,
+				14EB9FC11DDD3CEA00CC0D29 /* Main.storyboard */,
+				14EB9FC41DDD3CEA00CC0D29 /* Assets.xcassets */,
+				14EB9FC61DDD3CEA00CC0D29 /* LaunchScreen.storyboard */,
+				14EB9FC91DDD3CEA00CC0D29 /* Info.plist */,
+				14EB9FD11DDD3CEA00CC0D29 /* GiterestTests */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		14EB9FB11DDD3CEA00CC0D29 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +137,7 @@
 		14EB9FBC1DDD3CEA00CC0D29 /* Giterest */ = {
 			isa = PBXGroup;
 			children = (
+				14DEA7BE1DDE5CC1007AEA56 /* GithubOAuthManager.swift */,
 				14EB9FBD1DDD3CEA00CC0D29 /* AppDelegate.swift */,
 				14EB9FBF1DDD3CEA00CC0D29 /* ViewController.swift */,
 				4B2D09681DDE5CAE00476E41 /* GithubOAuthManager.swift */,
@@ -149,6 +165,7 @@
 				14EB9FF71DDD3D0F00CC0D29 /* Giterest-FullTests */,
 				14EB9FE51DDD3D0F00CC0D29 /* ViewController.swift */,
 				14EBA0021DDD3E3200CC0D29 /* GithubOAuthManager.swift */,
+				14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */,
 				14EBA0011DDD3E0600CC0D29 /* Supporting FIles */,
 			);
 			path = "Giterest-Full";
@@ -159,7 +176,6 @@
 			children = (
 				14EB9FF81DDD3D0F00CC0D29 /* Giterest_FullTests.swift */,
 				14EB9FFA1DDD3D0F00CC0D29 /* Info.plist */,
-				14DEA7BA1DDD776F007AEA56 /* GithubRequestManager.swift */,
 			);
 			path = "Giterest-FullTests";
 			sourceTree = SOURCE_ROOT;
